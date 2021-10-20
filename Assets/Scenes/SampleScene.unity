@@ -942,6 +942,7 @@ GameObject:
   - component: {fileID: 1070569204}
   - component: {fileID: 1070569205}
   - component: {fileID: 1070569206}
+  - component: {fileID: 1070569207}
   m_Layer: 0
   m_Name: Boarder
   m_TagString: Untagged
@@ -1002,6 +1003,22 @@ CapsuleCollider2D:
   m_Offset: {x: 1.2, y: -0.66}
   m_Size: {x: 3.07, y: 0.2}
   m_Direction: 1
+--- !u!58 &1070569207
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070569203}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.58, y: 0.87}
+  serializedVersion: 2
+  m_Radius: 0.37
 --- !u!1 &1579664976
 GameObject:
   m_ObjectHideFlags: 0
