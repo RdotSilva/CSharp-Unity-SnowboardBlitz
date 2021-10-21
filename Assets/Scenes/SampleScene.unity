@@ -962,6 +962,7 @@ GameObject:
   - component: {fileID: 1070569205}
   - component: {fileID: 1070569206}
   - component: {fileID: 1070569207}
+  - component: {fileID: 1070569208}
   m_Layer: 0
   m_Name: Boarder
   m_TagString: Untagged
@@ -1004,7 +1005,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!70 &1070569206
 CapsuleCollider2D:
@@ -1038,6 +1039,19 @@ CircleCollider2D:
   m_Offset: {x: 1.58, y: 0.87}
   serializedVersion: 2
   m_Radius: 0.37
+--- !u!114 &1070569208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070569203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 171b5fddd9bd45344b6ff29fe9b1387c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torqueAmount: 1
 --- !u!1 &1579664976
 GameObject:
   m_ObjectHideFlags: 0
