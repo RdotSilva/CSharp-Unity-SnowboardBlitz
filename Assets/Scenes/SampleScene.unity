@@ -492,7 +492,7 @@ GameObject:
   - component: {fileID: 906647140}
   m_Layer: 0
   m_Name: Level Sprite Shape
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1201,6 +1201,7 @@ GameObject:
   - component: {fileID: 1070569206}
   - component: {fileID: 1070569207}
   - component: {fileID: 1070569208}
+  - component: {fileID: 1070569209}
   m_Layer: 0
   m_Name: Boarder
   m_TagString: Player
@@ -1290,6 +1291,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   torqueAmount: 10
+--- !u!114 &1070569209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070569203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a72c333d6850c4f99c9bdb838cad10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1579664976
 GameObject:
   m_ObjectHideFlags: 0
