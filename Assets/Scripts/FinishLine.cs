@@ -11,6 +11,7 @@ public class FinishLine : MonoBehaviour
       {
            // Reload the scene when user crosses the finish line
            SceneManager.LoadScene(0);
+           // TODO: Intead of restarting the scene we should load into the next level
       }
    }
 }
