@@ -6,6 +6,7 @@ public class LevelGenerator : MonoBehaviour
 {
     private void OnFinishLevel() 
     {
-        // TODO: Logic when user finishes level
+        // Reload the scene when user crosses the finish line
+        SceneManager.LoadScene(0);
     }
 }
