@@ -10,8 +10,16 @@ public class FinishLine : MonoBehaviour
       if (other.tag == "Player")
       {
            // Reload the scene when user crosses the finish line
-           SceneManager.LoadScene(0);
+           Invoke("ReloadScene", 2f);
            // TODO: Intead of restarting the scene we should load into the next level
       }
+   }
+
+   /// <summary>
+   ///   Reload the current scene
+   /// </summary>
+   private void ReloadScene()
+   {
+      SceneManager.LoadScene(0);
    }
 }
