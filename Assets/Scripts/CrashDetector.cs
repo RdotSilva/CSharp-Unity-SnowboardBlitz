@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CrashDetector : MonoBehaviour
 {
-  LevelGenerator levelGenerator;
   private void OnTriggerEnter2D(Collider2D other)
   {
       if (other.tag == "Ground")
       {
-          Debug.Log("You bumped your head!");
-          // TODO: Add logic to reset game when player bumps head
-          // For now just restart the level
-          levelGenerator.OnFinishLevel();
+          // Reload the scene when user bumps head
+        SceneManager.LoadScene(0);
       }
   }
 }
