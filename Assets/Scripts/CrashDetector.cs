@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class CrashDetector : MonoBehaviour
 {
   [SerializeField] float sceneReloadDelay = 0.5f; 
+  [SerializeField] ParticleSystem crashEffect;
   private void OnTriggerEnter2D(Collider2D other)
   {
       if (other.tag == "Ground")
       {
-          // Reload the scene when user bumps head
+        // Play effect if users crashes on ground
+        crashEffect.Play();
+        // Reload the scene when user bumps head
         Invoke("ReloadScene", sceneReloadDelay);
       }
   }
