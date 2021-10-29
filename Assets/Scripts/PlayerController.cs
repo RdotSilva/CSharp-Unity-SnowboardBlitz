@@ -6,7 +6,6 @@ public class PlayerController : MonoBehaviour
 {
      [SerializeField] float torqueAmount = 1f;
     Rigidbody2D rb2d;
-   
 
     // Start is called before the first frame update
     void Start()
@@ -17,12 +16,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Allow character to flip using left and right arrow keys
+        RotatePlayer();
+    }
+
+    // Allow character to flip using left and right arrow keys
+    private void RotatePlayer()
+    {
+        
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             rb2d.AddTorque(torqueAmount);
         }
-        else if (Input.GetKey(KeyCode.RightArrow)) 
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             rb2d.AddTorque(-torqueAmount);
         }
