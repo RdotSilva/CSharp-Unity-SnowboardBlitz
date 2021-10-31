@@ -7,12 +7,17 @@ public class CrashDetector : MonoBehaviour
 {
   [SerializeField] float sceneReloadDelay = 0.5f; 
   [SerializeField] ParticleSystem crashEffect;
+  [SerializeField] AudioClip crashSFX;
   private void OnTriggerEnter2D(Collider2D other)
   {
       if (other.tag == "Ground")
       {
         // Play effect if users crashes on ground
         crashEffect.Play();
+
+        // Play SFX when user crashes
+        GetComponent<AudioSource>().PlayOneShot(crashSFX);
+
         // Reload the scene when user bumps head
         Invoke("ReloadScene", sceneReloadDelay);
       }
