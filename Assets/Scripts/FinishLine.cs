@@ -14,6 +14,10 @@ public class FinishLine : MonoBehaviour
 
          // Play particle effect when user crosses finish line
          finishEffect.Play();
+
+         // Play sound effect when user crosses finish
+         GetComponent<AudioSource>().Play();
+
          // Reload the scene when user crosses the finish line
          Invoke("ReloadScene", sceneReloadDelay);
          // TODO: Intead of restarting the scene we should load into the next level
