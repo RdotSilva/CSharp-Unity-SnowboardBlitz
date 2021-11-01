@@ -12,6 +12,8 @@ public class CrashDetector : MonoBehaviour
   {
       if (other.tag == "Ground")
       {
+        FindObjectOfType<PlayerController>().DisableControls();
+
         // Play effect if users crashes on ground
         crashEffect.Play();
 
