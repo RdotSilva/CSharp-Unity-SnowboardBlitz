@@ -33,7 +33,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    // Disable user controls
+
+    /// <summary>
+    /// Disable user controls
+    /// </summary>
     public void DisableControls()
     {
         canMove = false;
@@ -42,7 +45,9 @@ public class PlayerController : MonoBehaviour
         surfaceEffector2D.speed = 0f;
     }
 
-    // Speed up character when they press the up arrow
+    /// <summary>
+    /// Speed up character when they press the up arrow
+    /// </summary>
     private void RespondToBoost()
     {
         if (Input.GetKey(KeyCode.UpArrow))
@@ -55,7 +60,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Allow character to flip using left and right arrow keys
+    /// <summary>
+    /// Allow character to flip using left and right arrow keys
+    /// </summary>
     private void RotatePlayer()
     {
 
