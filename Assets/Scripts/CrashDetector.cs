@@ -12,7 +12,7 @@ public class CrashDetector : MonoBehaviour
     bool hasCrashed = false;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Ground" && !hasCrashed)
+        if (other.tag == "Ground" || other.tag == "Snowman" && !hasCrashed)
         {
             hasCrashed = true;
             FindObjectOfType<PlayerController>().DisableControls();
