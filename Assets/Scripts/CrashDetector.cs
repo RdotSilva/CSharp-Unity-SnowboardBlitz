@@ -5,31 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class CrashDetector : MonoBehaviour
 {
-  [SerializeField] float sceneReloadDelay = 0.5f; 
-  [SerializeField] ParticleSystem crashEffect;
-  [SerializeField] AudioClip crashSFX;
-  private void OnTriggerEnter2D(Collider2D other)
-  {
-      if (other.tag == "Ground")
-      {
-        FindObjectOfType<PlayerController>().DisableControls();
+    [SerializeField] float sceneReloadDelay = 0.5f;
+    [SerializeField] ParticleSystem crashEffect;
+    [SerializeField] AudioClip crashSFX;
 
-        // Play effect if users crashes on ground
-        crashEffect.Play();
+    bool hasCrashed = false;
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Ground" && !hasCrashed)
+        {
+            hasCrashed = true;
+            FindObjectOfType<PlayerController>().DisableControls();
 
-        // Play SFX when user crashes
-        GetComponent<AudioSource>().PlayOneShot(crashSFX);
+            // Play effect if users crashes on ground
+            crashEffect.Play();
 
-        // Reload the scene when user bumps head
-        Invoke("ReloadScene", sceneReloadDelay);
-      }
-  }
+            // Play SFX when user crashes
+            GetComponent<AudioSource>().PlayOneShot(crashSFX);
 
-   /// <summary>
-   ///   Reload the current scene
-   /// </summary>
-   private void ReloadScene()
-   {
-      SceneManager.LoadScene(0);
-   }
+            // Reload the scene when user bumps head
+            Invoke("ReloadScene", sceneReloadDelay);
+        }
+    }
+
+    /// <summary>
+    ///   Reload the current scene
+    /// </summary>
+    private void ReloadScene()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
