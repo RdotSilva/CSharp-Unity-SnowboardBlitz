@@ -18405,6 +18405,7 @@ GameObject:
   - component: {fileID: 1548884723}
   - component: {fileID: 1548884725}
   - component: {fileID: 1548884724}
+  - component: {fileID: 1548884726}
   m_Layer: 0
   m_Name: Square
   m_TagString: Score
@@ -18504,6 +18505,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1548884726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548884722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59fc8e7e5c3fb51469c5f08e62e81d31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1579664976
 GameObject:
   m_ObjectHideFlags: 0
@@ -19652,7 +19665,6 @@ GameObject:
   - component: {fileID: 1944750276}
   - component: {fileID: 1944750278}
   - component: {fileID: 1944750277}
-  - component: {fileID: 1944750279}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -19712,7 +19724,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score: '
+  m_Text: 'Score: 0'
 --- !u!222 &1944750278
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19721,19 +19733,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944750275}
   m_CullTransparentMesh: 1
---- !u!114 &1944750279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944750275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a348515df470c54494f095041acb249, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
 --- !u!1 &1968606722
 GameObject:
   m_ObjectHideFlags: 3
