@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Snowman
+  - Score
   layers:
   - Default
   - TransparentFX
