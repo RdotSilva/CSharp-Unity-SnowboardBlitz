@@ -15,6 +15,8 @@ public class ScoreDetector : MonoBehaviour
         if (other.tag == "Player")
         {
             score.IncrementScore();
+            // TODO: TEST THIS This is a potential fix for score being counted twice
+            Physics2D.IgnoreCollision(other, GetComponent<Collider2D>());
         }
     }
 }
