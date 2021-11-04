@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreDetector : MonoBehaviour
 {
-    Score score;
+    private Score score;
     private void Start()
     {
-        score = GetComponent<Score>();
+        score = FindObjectOfType<Score>();
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Score")
+        if (other.tag == "Player")
         {
             score.IncrementScore();
         }
